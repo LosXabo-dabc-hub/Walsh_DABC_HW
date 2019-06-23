@@ -1,4 +1,4 @@
-Attribute VB_Name = "Module1"
+Attribute VB_Name = "Module11"
 'Sub WS_easy()
 '
 '' Setting variable types
@@ -166,7 +166,7 @@ If i = 2 Then
 
     
     ' Times 100 and then enters percent into spreadsheet
-    Range("K" & Sum_Table_Row).Value = Percent_Change * 100
+    Range("K" & Sum_Table_Row).Value = Round(Percent_Change * 100, 2) & "%"
 
 
     ' Resetting Flags
@@ -187,14 +187,14 @@ LastRowOfOutput = Range("I" & Rows.Count).End(xlUp).Row
     MaxPercent = Application.WorksheetFunction.Max(Range("K:K"))
 
     ' Do not multiply times 100 - already reading converted numbers
-    Range("P" & 2).Value = MaxPercent
+    Range("P" & 2).Value = Round(MaxPercent, 2) & "%"
 
 
     ' Application.worksheetfunction.max(range("a:a"))
     MinPercent = Application.WorksheetFunction.Min(Range("K:K"))
 
     ' Do not multiply times 100 - already reading converted numbers
-    Range("P" & 3).Value = MinPercent
+    Range("P" & 3).Value = Round(MinPercent, 2) & "%"
 
 
     ' Application.worksheetfunction.max(range("a:a"))
