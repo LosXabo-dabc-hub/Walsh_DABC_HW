@@ -102,13 +102,10 @@ file2 = open("Election_Results.txt","w")
 
 # Write analysis output to file 
 # \n is placed to indicate EOL (End of Line) 
-file2.write(f" ")
 file2.write(f"Election Results \n")
 file2.write(f"_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n \n")
-file2.write(f" ")
 file2.write("Total Votes: " + str(total_votes_cast) + "\n")
 file2.write(f"_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n \n")
-file2.write(f" ")
 
 for i in range(len(c_results)) :  
 #    for j in range(len(c_results[i])) :  
