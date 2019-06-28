@@ -2,20 +2,15 @@
 import os
 import csv
 
-#import pandas
-#df = pandas.read_csv('hrdata.csv')
-#print(df)
-
-
+# Initializing variables
 tot_mo = 0
 total = 0
 x=0
+
+# Setting path to budget_data.csv
 budget_data_csv_path = os.path.join("..", "Resources", "budget_data.csv")
 
-# Lists to store data
-#Monthly_change = []
-Profit_Losses = []
-
+# Opening csv data
 # with open(udemy_csv, newline="", encoding='utf-8') as csvfile:
 with open(budget_data_csv_path, newline="", encoding='utf-8') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
